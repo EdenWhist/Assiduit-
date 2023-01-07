@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center"
+    android:orientation="vertical"
+    tools:context=".Staff">
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="200dp"
+        android:layout_height="68dp"
+        android:text="Scanner"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="203dp"
+        android:layout_height="72dp"
+        android:text="Add_Employee"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="Historic"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="202dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="30dp"
+        android:text="Logout"
+        android:onClick="logout"/>
+</LinearLayout>

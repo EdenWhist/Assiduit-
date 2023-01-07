@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1098596438948",
+    "project_id": "assid-app",
+    "storage_bucket": "assid-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098596438948:android:2671c4fe609ee2744d2731",
+        "android_client_info": {
+          "package_name": "com.example.assiduity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098596438948-3mtcvev1f5131mdbnpbpfi3kdb7306ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWBd62H60gngPNkWwiOxj6H8WcPqhpjEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098596438948-3mtcvev1f5131mdbnpbpfi3kdb7306ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
