@@ -89,13 +89,13 @@ public class Employee extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),Staff.class));
             finish();
         }
-        Employe employe= new Employe(nom,prenom,email,adresse,mdp,tel);
-        employeeDb.push().setValue(employe);
 
         fauth.createUserWithEmailAndPassword(email,mdp).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    Employe employe= new Employe(nom,prenom,email,adresse,mdp,tel);
+                    employeeDb.push().setValue(employe);
                     Toast.makeText(Employee.this, "Employee add!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(),Staff.class));
                     finish();
