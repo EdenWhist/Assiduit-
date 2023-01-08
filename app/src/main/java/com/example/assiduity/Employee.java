@@ -1,8 +1,5 @@
 package com.example.assiduity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,10 +19,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Employee extends AppCompatActivity {
-    EditText name,surname,address,phone,mail,key;
+    EditText name,surname,address,mail,key;
     Button add;
     DatabaseReference employeeDb;
-    FirebaseAuth fauth;
+    FirebaseAuth fauthe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,6 @@ public class Employee extends AppCompatActivity {
         name=findViewById(R.id.name);
         surname=findViewById(R.id.surname);
         address=findViewById(R.id.address);
-        phone=findViewById(R.id.phone);
         mail=findViewById(R.id.mail);
         key=findViewById(R.id.key);
         add=findViewById(R.id.create);
@@ -54,7 +53,6 @@ public class Employee extends AppCompatActivity {
         String adresse=address.getText().toString();
         String email=mail.getText().toString();
         String mdp=key.getText().toString();
-        String tel= phone.getText().toString();
 
         if(TextUtils.isEmpty(nom)){
             name.setError("name is required!");
@@ -66,10 +64,6 @@ public class Employee extends AppCompatActivity {
         }
         if(TextUtils.isEmpty(adresse)){
             address.setError("address is required!");
-            return;
-        }
-        if(TextUtils.isEmpty(tel)){
-            phone.setError("Phone number is required!");
             return;
         }
         if(TextUtils.isEmpty(email)){
@@ -85,16 +79,16 @@ public class Employee extends AppCompatActivity {
             return;
         }
 
-        if(fauth.getCurrentUser() != null){
+        if(fauthe.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),Staff.class));
             finish();
         }
 
-        fauth.createUserWithEmailAndPassword(email,mdp).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        fauthe.createUserWithEmailAndPassword(email,mdp).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Employe employe= new Employe(nom,prenom,email,adresse,mdp,tel);
+                    Employe employe= new Employe(nom,prenom,email,adresse,mdp);
                     employeeDb.push().setValue(employe);
                     Toast.makeText(Employee.this, "Employee add!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(),Staff.class));
