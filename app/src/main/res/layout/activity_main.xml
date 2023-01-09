@@ -25,7 +25,7 @@
         android:id="@+id/user"
         android:layout_width="191dp"
         android:layout_height="48dp"
-        android:hint="User_name"
+        android:hint="@string/user_name"
         android:translationY="25dp"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="116dp" />
@@ -34,7 +34,7 @@
         android:id="@+id/password"
         android:layout_width="191dp"
         android:layout_height="48dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:translationY="50dp"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="116dp" />
@@ -43,7 +43,7 @@
         android:id="@+id/sign"
         android:layout_width="191dp"
         android:layout_height="48dp"
-        android:text="ENTER"
+        android:text="@string/enter"
         android:translationY="90dp" />
 
     <ProgressBar
