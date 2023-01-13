@@ -37,6 +37,7 @@ public class Employee extends AppCompatActivity {
         add=findViewById(R.id.create);
 
         employeeDb= FirebaseDatabase.getInstance().getReference().child("employee");
+        fauthe = FirebaseAuth.getInstance();
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,8 +89,9 @@ public class Employee extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Employe employe= new Employe(nom,prenom,email,adresse,mdp);
-                    employeeDb.push().setValue(employe);
+                    Employe employe= new Employe(nom,prenom,email,adresse,mdp,FirebaseAuth.getInstance().getUid());
+                    employeeDb.child(FirebaseAuth.getInstance().getUid()).setValue(employe);
+
                     Toast.makeText(Employee.this, "Employee add!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(),Staff.class));
                     finish();

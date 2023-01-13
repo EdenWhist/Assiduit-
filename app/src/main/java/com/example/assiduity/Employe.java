@@ -1,14 +1,15 @@
 package com.example.assiduity;
 
 public class Employe {
-    String nom,prenom,email,adresse,mdp;
+    String nom,prenom,email,adresse,mdp,Id;
 
-    public Employe(String nom, String prenom, String email, String adresse, String mdp) {
+    public Employe(String nom, String prenom, String email, String adresse, String mdp,String Id) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.adresse = adresse;
         this.mdp = mdp;
+        this.Id = Id;
     }
 
     public String getNom() {
@@ -29,6 +30,10 @@ public class Employe {
 
     public String getMdp() {
         return mdp;
+    }
+
+    public String getId() {
+        return Id;
     }
 
 }

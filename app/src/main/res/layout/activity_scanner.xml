@@ -3,33 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
     tools:context=".Scanner">
 
     <TextView
-      android:id="@+id/textContent"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_margin="10dp"
-      android:text="messageContent"/>
+        android:id="@+id/textContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="messageContent" />
 
     <TextView
-      android:id="@+id/textFormat"
-      android:text="messageFormat"
-      android:layout_width="wrap_content"
-      android:layout_gravity="center"
+        android:id="@+id/textFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:layout_height="wrap_content" />
+        android:text="messageFormat" />
 
-  <Button
-      android:id="@+id/scanBtn"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="10dp"
-      android:backgroundTint="#0F9D58"
-      android:layout_gravity="center"
-      android:text="Scan"/>
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="#0F9D58"
+        android:text="Scan" />
 
 
-
-  </LinearLayout>
+</LinearLayout>

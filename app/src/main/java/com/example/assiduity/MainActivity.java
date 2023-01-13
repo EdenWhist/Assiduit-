@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     EditText psswd;
     Button enter;
     ProgressBar progressBar;
+   // DatabaseReference db;
     FirebaseAuth fauth;
 
     @Override
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         psswd=findViewById(R.id.password);
         enter=findViewById(R.id.sign);
         progressBar=findViewById(R.id.progressBar);
+        fauth=FirebaseAuth.getInstance();
+        //db = FirebaseDatabase.getInstance().getReference("employee");
 
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
